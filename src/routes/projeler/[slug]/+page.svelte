@@ -16,7 +16,7 @@
 	let lastMouseX = $state(0);
 	let lastMouseY = $state(0);
 
-	const project = data.project;
+	const project = $derived(data.project);
 
 	function nextImage() {
 		if (project?.gallery) {
