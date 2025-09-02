@@ -144,9 +144,11 @@
 		}
 	}
 
-	function getRelatedProject(slug: string) {
-		return data.relatedProjects.find((p) => p.slug === slug);
-	}
+	$effect(() => {
+		project;
+		currentImageIndex = 0;
+		window.scrollTo(0, 0);
+	});
 </script>
 
 <svelte:head>
@@ -651,16 +653,12 @@
 	/* Gallery */
 	.project-gallery {
 		position: relative;
+		height: 100%;
 	}
 
 	.gallery-container {
 		position: sticky;
-		top: 80px;
-		height: fit-content;
-		max-height: calc(100vh - 160px);
-		overflow-y: auto;
-		scrollbar-width: none; /* Firefox */
-		-ms-overflow-style: none; /* IE/Edge */
+		top: 120px;
 	}
 
 	.gallery-container::-webkit-scrollbar {
