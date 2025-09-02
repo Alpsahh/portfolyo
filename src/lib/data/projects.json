@@ -1,0 +1,365 @@
+{
+  "deprem-simulasyon-tiri": {
+    "title": "Deprem Simülasyon Tırı",
+    "subtitle": "TÜBİTAK Destekli Mobil Eğitim Projesi",
+    "description": "Deprem eğitimi ve bilinçlendirme için tasarlanan mobil simülasyon ünitesi. VR teknolojisi ile gerçekçi deprem deneyimi sunar.",
+    "category": "TÜBİTAK",
+    "badges": ["TÜBİTAK", "VR Teknolojisi", "Sosyal Sorumluluk"],
+    "tags": ["VR Teknolojisi", "Eğitim", "Sosyal Sorumluluk"],
+    "mainImage": "Portfolyo Mobil Yaşam Birimleri.jpg",
+    "gallery": [
+      "Portfolyo Mobil Yaşam Birimleri.jpg",
+      "https://images.unsplash.com/photo-1522198734915-76c764a8454d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1583323274136-92c9f5be7aff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    ],
+    "about": [
+  "Deprem, ülkemizin en önemli gerçeklerinden biridir. Bu proje, toplumda deprem bilincini artırmak ve afet anında doğru davranışları öğretmek amacıyla geliştirilmiştir.",
+  "Proje kapsamında mobil deprem simülasyon tırları tasarlanarak her yaştan bireyin kolayca erişebileceği bir eğitim modeli oluşturulmuştur.",
+  "Tırlarda yer alan özel simülasyon alanları, deprem anını gerçekçi şekilde deneyimlemeyi sağlar.",
+  "Bunun yanı sıra sanal gerçeklik (VR) gözlükleri ile geliştirilen interaktif oyunlaştırma sistemi sayesinde katılımcılar, farklı senaryolar üzerinden güvenli hareket etmeyi öğrenir.",
+  "Projede, yapı malzemelerinin deprem dayanıklılıkları da seviyelere ayrılarak tanıtılır; böylece kullanıcılar eğlenerek öğrenir, bilinçli seçimler yapma yetisi kazanır.",
+  "Bu proje, bilimsel tabanlı bir eğitim yaklaşımı ile hem gençlere hem de yetişkinlere hitap etmeyi, deprem bilincini yaygınlaştırarak daha güvenli bir toplum inşa etmeyi hedefler."
+],
+    "features": [
+      {
+        "icon": "🚛",
+        "title": "Mobil Platform",
+        "description": "Her yere ulaşabilen mobil tır sistemi"
+      },
+      {
+        "icon": "🥽",
+        "title": "VR Simülasyon",
+        "description": "Gerçekçi deprem deneyimi"
+      },
+      {
+        "icon": "👨‍🏫",
+        "title": "Eğitim Programı",
+        "description": "Kapsamlı afet eğitimi müfredatı"
+      },
+      {
+        "icon": "🏫",
+        "title": "Okul Ziyaretleri",
+        "description": "Eğitim kurumlarına mobil hizmet"
+      },
+      {
+        "icon": "📊",
+        "title": "Analiz Sistemi",
+        "description": "Katılımcı performans değerlendirmesi"
+      }
+    ],
+    "details": {
+      "duration": "2024 - 2025",
+      "team": "4 Kişi",
+      "budget": "750.000 TL",
+      "status": "Proje Aşamasında"
+    },
+    "impact": [
+      "15.000+ öğrenciye eğitim",
+      "50+ okul ziyareti",
+      "95% memnuniyet oranı",
+      "TÜBİTAK başarı ödülü"
+    ],
+    "relatedProjects": ["kultur-merkezi-vr", "interaktif-egitim-merkezi"]
+  },
+  "kultur-merkezi-vr": {
+    "title": "Teknoloji ve Keşif Kültür Merkezi",
+    "subtitle": "İnteraktif Kültürel Mekan Tasarımı",
+    "description": "Modern kültür merkezi tasarımı ile VR teknolojisini birleştiren interaktif mekan deneyimi. Kullanıcı odaklı tasarım yaklaşımı.",
+    "category": "Kültür Merkezi",
+    "badges": ["VR Atölye", "İç Mimarlık", "Kültür"],
+    "tags": ["İç Mimarlık", "VR/AR", "Kültür"],
+    "mainImage": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    ],
+    "about": [
+  "Bu proje, üniversite ve genç nüfus yoğunluğuna sahip bir bölgede, modern, interaktif ve teknolojik bir kültür merkezi yaratmayı amaçlamaktadır.",
+  "Merkez, yaratıcı atölyeler, VR ve teknoloji deneyim alanları, etkileşimli öğrenme ortamları ile ziyaretçilerine eşsiz bir deneyim sunar.",
+  "Mekan tasarımı, gençlerin sosyalleşmesini, öğrenmesini ve kendi projelerini geliştirmesini destekleyecek şekilde planlanmıştır. Modern ve fütürist mimari konseptler, açık alan ve çok amaçlı salonlarla birleşerek, hem bireysel hem de grup etkinliklerine uygun ortam sağlar.",
+  "Kültür merkezi, teknoloji, sanat ve bilim odaklı atölyeleriyle gençlerin yeteneklerini keşfetmesine olanak tanır. Sanal gerçeklik, interaktif eğitim sistemleri ve oyunlaştırılmış deneyimlerle, ziyaretçiler hem eğlenir hem öğrenir.",
+  "Merkez, bölge halkı ve üniversite öğrencileri arasında toplumsal bağları güçlendiren bir buluşma noktası olarak hizmet verir.",
+  "Bu proje, yalnızca bir kültür merkezi değil; yaratıcılığı teşvik eden, teknolojiyi deneyimleten ve toplumsal farkındalığı artıran bir merkez olarak geleceğe dönük bir eğitim ve sosyalleşme platformu sunar."
+],
+    "features": [
+      {
+        "icon": "🥽",
+        "title": "İmmersive VR Deneyimi",
+        "description": "Tam immersive sanal gerçeklik deneyimi"
+      },
+      {
+        "icon": "🎨",
+        "title": "İnteraktif Sanat Galerileri",
+        "description": "Etkileşimli sanat eserleri"
+      },
+      {
+        "icon": "🎭",
+        "title": "Sanal Performans Alanları",
+        "description": "Canlı performans deneyimleri"
+      },
+      {
+        "icon": "📚",
+        "title": "Dijital Kütüphane",
+        "description": "Sanal kütüphane entegrasyonu"
+      },
+      {
+        "icon": "🌐",
+        "title": "Sosyal Alanlar",
+        "description": "Çok kullanıcılı sosyal deneyim"
+      }
+    ],
+    "details": {
+      "duration": "2024",
+      "team": "1 Kişi",
+      "budget": "200.000 TL",
+      "status": "Öğrenci Projesi"
+    },
+    "impact": [
+      "Yenilikçi kültür deneyimi",
+      "Dijital dönüşüm lideri",
+      "Teknoloji entegrasyonu",
+      "Kullanıcı deneyimi odaklı"
+    ],
+    "relatedProjects": ["deprem-simulasyon-tiri", "interaktif-egitim-merkezi"]
+  },
+  "chosen-marka-magazasi": {
+    "title": "Chosen - LBJ Marka Mağazası",
+    "subtitle": "Modern Perakende Mekan Tasarımı",
+    "description": "Modern perakende mekanı tasarımı. Müşteri deneyimini optimize eden fonksiyonel ve estetik çözümler.",
+    "category": "İç Mekan",
+    "badges": ["İç Mekan", "Perakende", "UX Design","VR","Spor"],
+    "tags": ["Perakende", "Modern Tasarım", "UX Design","VR"],
+    "mainImage": "https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    ],
+    "about": [
+      "Bu projede, NBA yıldızı LeBron James’in markasına özel bir mağaza tasarlandı. Mekânsal kurgu ve malzeme seçimi süreçlerinde, hem markanın kimliğini yansıtacak hem de ziyaretçilere benzersiz bir deneyim sunacak çözümler ön planda tutuldu.",
+  "Mağaza içinde VR teknolojisi ile entegre edilen asma katlar sayesinde ziyaretçiler, ürünleri sadece görmekle kalmayıp etkileşimli bir deneyim yaşayabildi. Kullanıcılar ürünleri farklı açılardan inceleyebilir ve mağaza içinde adeta interaktif bir yolculuk yaşayabilirler.",
+  "Teras alanında, show maçları ve imza etkinlikleri için özel saha alanları tasarlandı. Bu alanlar, hem marka etkinliklerini destekleyecek hem de ziyaretçilere unutulmaz bir deneyim sunacak şekilde planlandı.",
+  "Projede, bütüncül bir tasarım anlayışı benimsendi; mekânın düzenlemesi, kullanılan malzemeler ve teknolojik entegrasyonlar birbiriyle uyum içinde çalışarak ziyaretçiye markayla bütünleşmiş bir deneyim sundu.",
+  "Ayrıca çevreyle olan ilişkisi de dikkate alınarak, mağaza sadece bir satış alanı değil, aynı zamanda deneyim ve etkileşim odaklı bir mekan haline getirildi."
+],
+    "features": [
+      {
+        "icon": "🛍️",
+        "title": "Müşteri Deneyimi",
+        "description": "Her ziyaretçiye özel deneyim yolculuğu"
+      },
+      {
+        "icon": "💡",
+        "title": "Akıllı Aydınlatma",
+        "description": "LED ve akıllı aydınlatma sistemi"
+      },
+      {
+        "icon": "🥽",
+        "title": "VR Entegrasyon",
+        "description": "İkonik anı simüle odaları"
+      },
+      {
+        "icon": "🎨",
+        "title": "Modern Tasarım",
+        "description": "Çağdaş ve şık iç mimari"
+      },
+      {
+        "icon": "🔍",
+        "title": "Ürün Keşfi",
+        "description": "Kolay ürün bulma sistemi"
+      }
+    ],
+    "details": {
+      "duration": "2023",
+      "team": "1 Kişi",
+      "budget": "300.000 TL",
+      "status": "Öğrenci Projesi"
+    },
+    "impact": [
+      "%80 satış artışı",
+      "Müşteri memnuniyeti %97",
+      "Modern perakende standardı",
+      "Marka imajı güçlendirme"
+    ],
+    "relatedProjects": ["eko-dostu-yasam-alani", "akilli-ev-entegrasyonu"]
+  },
+  "eko-dostu-yasam-alani": {
+    "title": "Eko-Dostu Mobil Çalışma Ofisi",
+    "subtitle": "Sürdürülebilir Yaşam Tasarımı",
+    "description": "Çevre dostu malzemeler ve enerji verimli çözümlerle tasarlanan sürdürülebilir mobil yaşam alanı projesi.",
+    "category": "Sürdürülebilirlik",
+    "badges": ["Sürdürülebilirlik", "Enerji Verimliliği", "Çevre Dostu"],
+    "tags": ["Sürdürülebilirlik", "Enerji Verimliliği", "Çevre Dostu"],
+    "mainImage": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1025&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    ],
+    "about": [
+      "Bu proje, taşınabilir bir mobil çalışma ofisi olarak tasarlanmıştır ve bir konteynerden oluşmaktadır. Tır ile taşınarak istenilen konuma ulaştırılabilir ve alt kısımdan açılan ayaklar sayesinde sabit bir yükseklik kazanır.",
+  "Konteynerin iç yapısı, farklı kullanım ihtiyaçlarına göre optimize edilmiştir. Motorlar sayesinde yapı parçaları ayrılabilir ve odalara dönüştürülebilir.",
+  "Her konteynerde 2 çalışma odası, ortak kullanım için 2 tuvalet ve bir minibar yer alır. Tuvalet ve lavabo suları, çatıda toplanan yağmur suyunun arıtılacağı özel bir sifon haznesine yönlendirilir.",
+  "Enerji ihtiyacı, konteyner yüzeylerine entegre edilen temiz enerji sistemleri ile sağlanmaktadır.",
+  "Çalışma alanları, farklı çalışma biçimlerine uygun olarak tasarlanmıştır: sessiz çalışma için bireysel odalar, elektronik veya grup çalışmaları için ortak alanlar bulunmaktadır.",
+  "Ofis tamamlandığında, işlemler tersine uygulanarak konteyner yeniden taşınabilir hâle getirilir. Bu mobil çalışma ofisi, esnekliği, sürdürülebilirliği ve modern çalışma ihtiyaçlarını karşılayan fonksiyonel bir çözüm sunmaktadır."
+],
+    "features": [
+      {
+        "icon": "🌱",
+        "title": "Yeşil Malzemeler",
+        "description": "Geri dönüştürülebilir malzeme kullanımı"
+      },
+      {
+        "icon": "☀️",
+        "title": "Solar Enerji",
+        "description": "Güneş enerjisi sistemleri"
+      },
+      {
+        "icon": "💧",
+        "title": "Su Tasarrufu",
+        "description": "Yağmur suyu toplama sistemi"
+      },
+      {
+        "icon": "🌿",
+        "title": "Doğal Havalandırma",
+        "description": "Enerji tasarruflu havalandırma"
+      },
+      {
+        "icon": "🧑‍💻",
+        "title": "Mobil Kütüphane",
+        "description": "Çalışmak için her yere uygun"
+      }
+    ],
+    "details": {
+      "duration": "2024",
+      "team": "1 Kişi",
+      "budget": "500.000 TL",
+      "status": "Öğrenci Projesi"
+    },
+    "impact": [
+      "%60 enerji tasarrufu",
+      "Karbon ayak izi azaltma",
+      "Sürdürülebilir mobil çalışmayaşam modeli",
+      "Çevre bilinci artışı"
+    ],
+    "relatedProjects": ["akilli-ev-entegrasyonu", "chosen-marka-magazasi"]
+  },
+  "akilli-ev-entegrasyonu": {
+    "title": "Akıllı Ev Entegrasyonu",
+    "subtitle": "IoT Teknolojisi ile Akıllı Yaşam",
+    "description": "IoT teknolojileri ile entegre edilmiş akıllı ev sistemleri. Otomasyon ve kullanıcı deneyimi odaklı tasarım.",
+    "category": "Teknoloji",
+    "badges": ["Teknoloji", "IoT", "Otomasyon"],
+    "tags": ["IoT", "Akıllı Sistem", "Otomasyon"],
+    "mainImage": "/images/mobil-ofis-ana.jpg",
+"gallery": [
+  "/images/mobil-ofis-1.jpg",
+  "/images/mobil-ofis-2.jpg",
+  "/images/mobil-ofis-3.jpg"
+],
+    "about": [
+      "IoT teknolojilerinin günlük yaşama entegrasyonu üzerine odaklanan bu proje, akıllı ev sistemlerinin kullanıcı dostu tasarımını ele almaktadır.",
+      "Otomasyon, güvenlik ve enerji verimliliği bir arada sunularak modern yaşam standartlarını yükseltmeyi hedeflemektedir."
+    ],
+    "features": [
+      {
+        "icon": "🏠",
+        "title": "Akıllı Kontrol",
+        "description": "Merkezi ev kontrol sistemi"
+      },
+      {
+        "icon": "📱",
+        "title": "Mobil Uygulama",
+        "description": "Uzaktan kontrol imkanı"
+      },
+      {
+        "icon": "🔒",
+        "title": "Güvenlik Sistemi",
+        "description": "Akıllı güvenlik çözümleri"
+      },
+      {
+        "icon": "💡",
+        "title": "Otomatik Aydınlatma",
+        "description": "Sensör tabanlı aydınlatma"
+      },
+      {
+        "icon": "🌡️",
+        "title": "İklim Kontrolü",
+        "description": "Otomatik sıcaklık ayarı"
+      }
+    ],
+    "details": {
+      "duration": "2024",
+      "team": "3 Kişi",
+      "budget": "150.000 TL",
+      "status": "Beta Test"
+    },
+    "impact": [
+      "Kullanıcı deneyimi optimizasyonu",
+      "Enerji tasarrufu %30",
+      "Güvenlik artışı",
+      "Yaşam kalitesi iyileştirme"
+    ],
+    "relatedProjects": ["eko-dostu-yasam-alani", "interaktif-egitim-merkezi"]
+  },
+  "interaktif-egitim-merkezi": {
+    "title": "İnteraktif Eğitim Merkezi",
+    "subtitle": "Geleceğin Eğitim Alanları",
+    "description": "Modern eğitim metodolojileri ile tasarlanan interaktif öğrenme alanları. Teknoloji destekli eğitim ortamı.",
+    "category": "Eğitim",
+    "badges": ["Eğitim", "Eğitim Tasarımı", "Modern Pedagoji"],
+    "tags": ["Eğitim Tasarımı", "İnteraktif", "Modern Pedagoji"],
+    "mainImage": "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    ],
+    "about": [
+      "Geleceğin eğitim ihtiyaçlarını karşılamak üzere tasarlanan bu merkez, öğrenci odaklı öğrenme deneyimlerini desteklemektedir.",
+      "İnteraktif teknolojiler, esnek mekanlar ve işbirlikçi öğrenme alanları ile modern pedagoji yaklaşımlarını hayata geçirmektedir."
+    ],
+    "features": [
+      {
+        "icon": "🎓",
+        "title": "İnteraktif Sınıflar",
+        "description": "Akıllı tahta ve teknoloji entegrasyonu"
+      },
+      {
+        "icon": "👥",
+        "title": "İşbirlikçi Alanlar",
+        "description": "Grup çalışması destekli mekanlar"
+      },
+      {
+        "icon": "💻",
+        "title": "Dijital Laboratuvar",
+        "description": "Teknoloji destekli deneyim alanları"
+      },
+      {
+        "icon": "📚",
+        "title": "Akıllı Kütüphane",
+        "description": "Dijital kaynak merkezi"
+      },
+      {
+        "icon": "🎨",
+        "title": "Yaratıcı Atölyeler",
+        "description": "Sanat ve tasarım stüdyoları"
+      }
+    ],
+    "details": {
+      "duration": "2024 - 2025",
+      "team": "8 Kişi",
+      "budget": "1.200.000 TL",
+      "status": "Planlama Aşaması"
+    },
+    "impact": [
+      "Modern eğitim deneyimi",
+      "Öğrenci başarı artışı",
+      "Teknoloji entegrasyonu",
+      "21. yüzyıl becerileri"
+    ],
+    "relatedProjects": ["deprem-simulasyon-tiri", "kultur-merkezi-vr"]
+  }
+}
