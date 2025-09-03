@@ -224,26 +224,6 @@
 		position: relative;
 		z-index: 2;
 	}
-
-	@keyframes crazyEffect {
-		0%,
-		100% {
-			transform: rotate(0deg) scale(1) translate(0, 0);
-			filter: hue-rotate(0deg);
-		}
-		25% {
-			transform: rotate(90deg) scale(1.5) translate(600px, 100px);
-			filter: hue-rotate(90deg);
-		}
-		50% {
-			transform: rotate(-180deg) scale(0.95) translate(-100px, 250px);
-			filter: hue-rotate(180deg);
-		}
-		75% {
-			transform: rotate(360deg) scale(1.25) translate(600px, -100px);
-			filter: hue-rotate(270deg);
-		}
-	}
 	.about-image {
 		position: relative;
 		border-radius: 20px;
@@ -351,7 +331,6 @@
 			inset 0 1px 0 rgba(255, 255, 255, 0.2);
 		border-color: rgba(0, 191, 255, 0.3);
 	}
-
 	.skill-icon {
 		font-size: 3rem;
 		background: linear-gradient(45deg, #00bfff, #8a2be2, #ff1493);

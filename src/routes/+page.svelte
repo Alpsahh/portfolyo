@@ -97,7 +97,14 @@
 		left: -2px;
 		right: -2px;
 		bottom: -2px;
-		background: linear-gradient(45deg, #00bfff, #8a2be2, #ff1493, #00bfff);
+		background: linear-gradient(
+			35deg,
+			rgba(0, 119, 255, 0.5) 0%,
+
+			rgba(0, 0, 0, 0) 50%,
+
+			rgba(0, 119, 255, 0.5) 100%
+		);
 		background-size: 300% 300%;
 		border-radius: 20px;
 		z-index: -1;
