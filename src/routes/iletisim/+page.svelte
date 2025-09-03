@@ -67,8 +67,8 @@
 						</div>
 						<div class="contact-details">
 							<h4>E-posta</h4>
-							<a href="mailto:alperen@example.com">
-								<p>alperen@example.com</p>
+							<a href="mailto:alpgny03@gmail.com">
+								<p>alpgny03@gmail.com</p>
 							</a>
 						</div>
 					</div>
@@ -79,7 +79,7 @@
 						</div>
 						<div class="contact-details">
 							<h4>Telefon</h4>
-							<p>+90 (555) 123 45 67</p>
+							<a href="tel:+905306217309">+90 (530) 621 73 09</a>
 						</div>
 					</div>
 
@@ -99,7 +99,13 @@
 						</div>
 						<div class="contact-details">
 							<h4>LinkedIn</h4>
-							<p>linkedin.com/in/alperen-goney</p>
+							<a
+								href="https://www.linkedin.com/in/alperenşahingöney"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Profilime Git
+							</a>
 						</div>
 					</div>
 				</div>
@@ -335,6 +341,12 @@
 		margin-bottom: 5px;
 		font-size: 1.1rem;
 	}
+	.contact-details a {
+		color: #00bfff;
+		margin: 0;
+		font-weight: 500;
+		text-decoration: none; /* alt çizgiyi kaldırmak için */
+	}
 
 	.contact-details p {
 		color: #00bfff;
@@ -444,11 +456,15 @@
 		border: 1px solid rgba(255, 255, 255, 0.1);
 		border-radius: 10px;
 		padding: 12px 15px;
-		color: #fff;
+		color: #ffffff;
 		font-size: 1rem;
 		backdrop-filter: blur(10px);
 		transition: all 0.3s ease;
 		outline: none;
+	}
+	.form-group select option {
+		background-color: #36333f; /* koyu arka plan */
+		color: #fff; /* yazı rengi beyaz */
 	}
 
 	.form-group input:focus,
