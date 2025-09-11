@@ -15,6 +15,9 @@
 	let isDragging = $state(false);
 	let lastMouseX = $state(0);
 	let lastMouseY = $state(0);
+	let touchStartX = $state(0);
+	let touchStartY = $state(0);
+	let lastTouchDistance = $state(0);
 
 	const project = $derived(data.project);
 
@@ -90,6 +93,7 @@
 			lastMouseX = event.clientX;
 			lastMouseY = event.clientY;
 			event.preventDefault();
+			event.stopPropagation();
 		}
 	}
 
@@ -101,6 +105,8 @@
 			imageTranslateY += deltaY;
 			lastMouseX = event.clientX;
 			lastMouseY = event.clientY;
+			event.preventDefault();
+			event.stopPropagation();
 		}
 	}
 
@@ -108,8 +114,69 @@
 		isDragging = false;
 	}
 
+	// Touch support for mobile
+	function handleTouchStart(event: TouchEvent) {
+		if (event.touches.length === 1 && imageScale > 1) {
+			// Single touch for dragging
+			isDragging = true;
+			touchStartX = event.touches[0].clientX;
+			touchStartY = event.touches[0].clientY;
+			lastMouseX = touchStartX;
+			lastMouseY = touchStartY;
+			event.preventDefault();
+			event.stopPropagation();
+		} else if (event.touches.length === 2) {
+			// Two touches for pinch-to-zoom
+			isDragging = false;
+			const touch1 = event.touches[0];
+			const touch2 = event.touches[1];
+			lastTouchDistance = Math.sqrt(
+				Math.pow(touch2.clientX - touch1.clientX, 2) + Math.pow(touch2.clientY - touch1.clientY, 2)
+			);
+			event.preventDefault();
+			event.stopPropagation();
+		}
+	}
+
+	function handleTouchMove(event: TouchEvent) {
+		if (event.touches.length === 1 && isDragging && imageScale > 1) {
+			// Single touch dragging
+			const deltaX = event.touches[0].clientX - lastMouseX;
+			const deltaY = event.touches[0].clientY - lastMouseY;
+			imageTranslateX += deltaX;
+			imageTranslateY += deltaY;
+			lastMouseX = event.touches[0].clientX;
+			lastMouseY = event.touches[0].clientY;
+			event.preventDefault();
+			event.stopPropagation();
+		} else if (event.touches.length === 2) {
+			// Pinch-to-zoom
+			const touch1 = event.touches[0];
+			const touch2 = event.touches[1];
+			const currentDistance = Math.sqrt(
+				Math.pow(touch2.clientX - touch1.clientX, 2) + Math.pow(touch2.clientY - touch1.clientY, 2)
+			);
+
+			if (lastTouchDistance > 0) {
+				const scaleFactor = currentDistance / lastTouchDistance;
+				const newScale = Math.min(Math.max(imageScale * scaleFactor, 0.5), 3);
+				imageScale = newScale;
+			}
+
+			lastTouchDistance = currentDistance;
+			event.preventDefault();
+			event.stopPropagation();
+		}
+	}
+
+	function handleTouchEnd() {
+		isDragging = false;
+		lastTouchDistance = 0;
+	}
+
 	function handleWheel(event: WheelEvent) {
 		event.preventDefault();
+		event.stopPropagation();
 		if (event.deltaY < 0) {
 			zoomIn();
 		} else {
@@ -156,7 +223,13 @@
 	<meta name="description" content={project.description} />
 </svelte:head>
 
-<svelte:window onkeydown={handleKeydown} onmousemove={handleMouseMove} onmouseup={handleMouseUp} />
+<svelte:window
+	onkeydown={handleKeydown}
+	onmousemove={handleMouseMove}
+	onmouseup={handleMouseUp}
+	ontouchmove={handleTouchMove}
+	ontouchend={handleTouchEnd}
+/>
 
 <section class="project-hero">
 	<div class="container">
@@ -344,7 +417,11 @@
 {#if lightboxOpen}
 	<div
 		class="lightbox-overlay"
-		onclick={closeLightbox}
+		onclick={(e) => {
+			if (e.target === e.currentTarget) {
+				closeLightbox();
+			}
+		}}
 		onkeydown={(e) => {
 			if (e.key === 'Escape') {
 				closeLightbox();
@@ -358,7 +435,10 @@
 		<div class="lightbox-container">
 			<button
 				class="lightbox-close"
-				onclick={closeLightbox}
+				onclick={(e) => {
+					e.stopPropagation();
+					closeLightbox();
+				}}
 				type="button"
 				aria-label="Lightbox'ı kapat">×</button
 			>
@@ -366,7 +446,10 @@
 			<div class="lightbox-zoom-controls">
 				<button
 					class="zoom-control"
-					onclick={zoomOut}
+					onclick={(e) => {
+						e.stopPropagation();
+						zoomOut();
+					}}
 					type="button"
 					aria-label="Uzaklaştır"
 					disabled={imageScale <= 0.5}
@@ -376,28 +459,48 @@
 				<span class="zoom-level">{Math.round(imageScale * 100)}%</span>
 				<button
 					class="zoom-control"
-					onclick={zoomIn}
+					onclick={(e) => {
+						e.stopPropagation();
+						zoomIn();
+					}}
 					type="button"
 					aria-label="Yakınlaştır"
 					disabled={imageScale >= 3}
 				>
 					+
 				</button>
-				<button class="zoom-control reset" onclick={resetZoom} type="button" aria-label="Sıfırla">
+				<button
+					class="zoom-control reset"
+					onclick={(e) => {
+						e.stopPropagation();
+						resetZoom();
+					}}
+					type="button"
+					aria-label="Sıfırla"
+				>
 					⌂
 				</button>
 			</div>
 
-			<button
+			<div
 				class="lightbox-image-wrapper"
 				onmousedown={handleMouseDown}
 				onwheel={handleWheel}
+				ontouchstart={handleTouchStart}
 				aria-label="Büyütülmüş resim - sürükleyerek hareket ettirin, tekrar tıklayarak kapatın"
 				onclick={(e) => {
 					e.stopPropagation();
-					if (imageScale === 1) closeLightbox();
+					if (imageScale === 1 && !isDragging) closeLightbox();
 				}}
-				type="button"
+				onkeydown={(e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						e.stopPropagation();
+						if (imageScale === 1) closeLightbox();
+					}
+				}}
+				role="button"
+				tabindex="0"
 			>
 				<img
 					src={project.gallery[lightboxImageIndex]}
@@ -407,12 +510,15 @@
 						imageScale}px, {imageTranslateY / imageScale}px);"
 					draggable="false"
 				/>
-			</button>
+			</div>
 
 			{#if project.gallery.length > 1}
 				<button
 					class="lightbox-nav prev"
-					onclick={prevLightboxImage}
+					onclick={(e) => {
+						e.stopPropagation();
+						prevLightboxImage();
+					}}
 					type="button"
 					aria-label="Önceki resim"
 				>
@@ -429,7 +535,10 @@
 				</button>
 				<button
 					class="lightbox-nav next"
-					onclick={nextLightboxImage}
+					onclick={(e) => {
+						e.stopPropagation();
+						nextLightboxImage();
+					}}
 					type="button"
 					aria-label="Sonraki resim"
 				>
@@ -455,7 +564,8 @@
 					{#each project.gallery as image, index}
 						<button
 							class="lightbox-thumb {index === lightboxImageIndex ? 'active' : ''}"
-							onclick={() => {
+							onclick={(e) => {
+								e.stopPropagation();
 								lightboxImageIndex = index;
 								resetImagePosition();
 							}}
@@ -928,6 +1038,7 @@
 		max-height: 95vh;
 		cursor: default;
 		user-select: none;
+		z-index: 10000;
 	}
 
 	.lightbox-image-wrapper {
@@ -942,6 +1053,7 @@
 		background: none;
 		padding: 0;
 		cursor: grab;
+		outline: none;
 	}
 
 	.lightbox-image-wrapper:active {
@@ -951,6 +1063,16 @@
 	.lightbox-image-wrapper:focus {
 		outline: 2px solid var(--primary);
 		outline-offset: 2px;
+	}
+
+	/* Prevent text selection on touch devices */
+	.lightbox-image-wrapper {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.lightbox-image {
@@ -982,6 +1104,7 @@
 		padding: 8px 16px;
 		border-radius: 25px;
 		backdrop-filter: blur(10px);
+		z-index: 10001;
 	}
 
 	.zoom-control {
@@ -1009,6 +1132,12 @@
 	.zoom-control:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	.zoom-control:active:not(:disabled) {
+		transform: scale(0.95);
+		background: rgba(0, 191, 255, 0.8);
 	}
 
 	.zoom-control.reset {
@@ -1039,6 +1168,7 @@
 		justify-content: center;
 		border-radius: 50%;
 		transition: all 0.3s ease;
+		z-index: 10001;
 	}
 
 	.lightbox-close:hover {
@@ -1062,11 +1192,16 @@
 		justify-content: center;
 		transition: all 0.3s ease;
 		backdrop-filter: blur(10px);
+		z-index: 10001;
 	}
 
 	.lightbox-nav:hover {
 		background: var(--primary);
 		transform: translateY(-50%) scale(1.1);
+	}
+
+	.lightbox-nav:active {
+		transform: translateY(-50%) scale(0.95);
 	}
 
 	.lightbox-nav.prev {
@@ -1195,16 +1330,17 @@
 		}
 
 		.lightbox-nav.prev {
-			left: -40px;
+			left: 20px;
 		}
 
 		.lightbox-nav.next {
-			right: -40px;
+			right: 20px;
 		}
 
 		.lightbox-nav {
 			width: 50px;
 			height: 50px;
+			z-index: 10001;
 		}
 
 		.breadcrumb {
@@ -1212,28 +1348,40 @@
 		}
 
 		.lightbox-controls {
-			bottom: -100px;
+			bottom: -150px;
 		}
 
 		.lightbox-counter {
-			bottom: -50px;
+			bottom: -40px;
+		}
+
+		.lightbox-close {
+			top: 20px;
+			right: 20px;
+			font-size: 2rem;
+			width: 40px;
+			height: 40px;
+			position: fixed;
+			z-index: 10002;
 		}
 
 		.lightbox-zoom-controls {
-			top: -60px;
+			top: 20px;
 			left: 50%;
 			transform: translateX(-50%);
+			position: fixed;
+			z-index: 10002;
 		}
 
 		.zoom-control {
-			width: 32px;
-			height: 32px;
-			font-size: 1rem;
+			width: 40px;
+			height: 40px;
+			font-size: 1.2rem;
 		}
 
 		.zoom-level {
-			font-size: 0.8rem;
-			min-width: 45px;
+			font-size: 0.9rem;
+			min-width: 50px;
 		}
 
 		.lightbox-image-wrapper {
