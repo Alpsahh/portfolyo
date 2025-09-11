@@ -6,10 +6,7 @@
 
 			<div class="about-content">
 				<div class="about-image">
-					<img
-						src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-						alt="Alperen Şahin Goney"
-					/>
+					<img src="/images/cv/cv.png" alt="Alperen Şahin Goney" />
 				</div>
 
 				<div class="about-text">
@@ -239,13 +236,14 @@
 		left: -50%;
 		width: 200%;
 		height: 200%;
-		background: conic-gradient(
-			from 0deg,
-			transparent,
-			rgba(0, 191, 255, 0.3),
-			transparent,
-			rgba(255, 20, 147, 0.3),
-			transparent
+		background: linear-gradient(
+			135deg,
+			rgba(0, 119, 255, 0.2) 0%,
+
+			rgba(0, 0, 0, 0) 30%,
+			rgba(0, 0, 0, 0) 70%,
+
+			rgba(0, 119, 255, 0.2) 100%
 		);
 		animation: glow 4s linear infinite;
 		border-radius: 20px;
